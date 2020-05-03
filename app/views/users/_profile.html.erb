@@ -1,5 +1,9 @@
+<div class="col-xs-12">
 <table class="table">
-		<tr><%= attachment_image_tag(user, :profile_image, :fill, 100, 100, fallback: "no_image.jpg") %></tr>
+	<tbody>
+
+		<tr>
+			<th><%= attachment_image_tag user,:profile_image, size: "100x100", fallback: "no_image.jpg" %>
 
 		<tr>
 			<th>name</th>
@@ -10,8 +14,10 @@
 			<th>introduction</th>
 			<th><%= user.introduction %></th>
 		</tr>
+	</tbody>
 </table>
 
 <div class="row">
-	<%= link_to '',edit_user_path(user), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{user.id}" %>
+	<%= link_to '',edit_user_path(user.id), class: "col-xs-12 btn btn-default glyphicon glyphicon-wrench edit_user_#{user.id}" %>
+</div>
 </div>

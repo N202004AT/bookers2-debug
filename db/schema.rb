@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_01_09_232832) do
     t.string "current_sign_in_ip"
     t.string "last_sign_in_ip"
     t.string "name"
+    t.string "profile_image_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.text "introduction"
